@@ -2,49 +2,52 @@
   box-sizing: border-box;
 }
 
-#q4Wrapper {
+.q4Wrapper {
   background-color: #2A3035;
   font-family: "Roboto", sans-serif;
   color: white;
 }
-#q4Wrapper h1, #q4Wrapper h3 {
+.q4Wrapper h1, .q4Wrapper h3 {
   margin: 0;
 }
-#q4Wrapper h1 {
+.q4Wrapper h1 {
   font-size: 48px;
 }
-#q4Wrapper h3 {
+.q4Wrapper h3 {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  margin :0px,10px;
 }
-#q4Wrapper header, #q4Wrapper footer {
+.q4Wrapper header, .q4Wrapper footer {
   background-color: #22272B;
 }
-#q4Wrapper header {
+.q4Wrapper header {
   padding: 20px;
 }
-#q4Wrapper footer {
+.q4Wrapper footer {
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
-#q4Wrapper article {
+.q4Wrapper article {
   text-align: center;
 }
-#q4Wrapper article img {
+.q4Wrapper article img {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
 }
-#q4Wrapper a {
+.q4Wrapper a {
   display: inline-block;
   text-decoration: none;
   color: white;
   transition: transform 0.3s ease;
 }
-#q4Wrapper a:hover {
+.q4Wrapper a:hover {
   transform: scale(1.05);
 }
-#q4Wrapper a span {
+.q4Wrapper a span {
   opacity: 0.5;
 }
 
@@ -57,8 +60,46 @@
   margin-bottom: 30px;
   text-align: center;
 }
-
+.layout{
+  background-color: #2A3035;
+}
 /* Begin styling the report items here! */
 .reports {
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+
+@media only screen and (min-width: 600px) and (max-width: 990px) {
+  .q4Wrapper h3{
+    margin: 0;
+    font-size: 12px;
+  }
+  .q4Wrapper article img{
+    transform: scale(.90);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .q4Wrapper h1 {
+      font-size: 32px;
+  }
+};
+
+
+@media only screen and (max-width: 600px) {
+  .reports{
+      justify-content: space-evenly;
+  }
+}
+
+
+@media only screen and (max-width: 774px) {
+  .reports{
+      margin: 0 20px;
+  }
+}
+
+
